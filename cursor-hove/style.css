@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    cursor: none;
+}
+ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+ul li{
+    list-style: none;
+    margin: 15px 0;
+    padding: 10px;
+}
+ul li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+
+ 
+}
+.cursor{
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: .1s;
+    mix-blend-mode: difference;
+}
+ul li:hover ~ .cursor {
+    transform: scale(4);
+    box-shadow: 0 0 0 1000px aqua;
+    background: white;
+}
